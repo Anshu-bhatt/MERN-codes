@@ -1,4 +1,6 @@
 import React from "react";
+import "./loginPage.css";
+//completed with using class component
 
 class LoginPage extends React.Component{
     constructor(props){
@@ -6,13 +8,13 @@ class LoginPage extends React.Component{
     }
     render(){
         return (
-            <>
+            <div className="login-page-root">
                 <h1>Login Page</h1>
                 <h2>Register</h2>
-                Name: <input type="text" name="name" onChange={(e)=>this.setState({name:e.target.value})}/><br/>
-                Email: <input type="text" name="email" onChange={(e)=>this.setState({email:e.target.value})}/><br/>
-                Mobile: <input type="text" name="Mobile" onChange={(e)=>this.setState({Mobile:e.target.value})}/><br/>
-                Semester: <select onChange={(e)=>this.setState({Semester:e.target.value})}>
+                Name: <input type="text" name="name" placeholder="Enter your name" onChange={(e)=>this.setState({name:e.target.value})}/>
+                Email: <input type="text" name="email" placeholder="Enter your email" onChange={(e)=>this.setState({email:e.target.value})}/>
+                Mobile: <input type="text" name="Mobile" placeholder="Enter your mobile number" onChange={(e)=>this.setState({Mobile:e.target.value})}/>
+                Semester:S <select onChange={(e)=>this.setState({Semester:e.target.value})}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -22,13 +24,20 @@ class LoginPage extends React.Component{
                     <option value="7">7</option>
                     <option value="8">8</option>
                 </select><br/>
-                Gender: 
-                <input type="radio" name="Gender" value="Male" onChange={(e)=>this.setState({Gender:e.target.value})}/>Male
-                <input type="radio" name="Gender" value="Female" onChange={(e)=>this.setState({Gender:e.target.value})}/>Female
-                <br/>
-                Message: <textarea name="Message" onChange={(e)=>this.setState({Message:e.target.value})}/><br/>
-                Password: <input type="password" name="Password" onChange={(e)=>this.setState({Password:e.target.value})}/> <br/>
-                Confirm Password: <input type="password" name="Confirm Password" onChange={(e)=>this.setState({Confirm_password:e.target.value})}/>
+                Gender:
+                <div className="gender-group">
+                  <label>
+                    <input type="radio" name="Gender" value="Male" onChange={(e)=>this.setState({Gender:e.target.value})}/>
+                    Male
+                  </label>
+                  <label>
+                    <input type="radio" name="Gender" value="Female" onChange={(e)=>this.setState({Gender:e.target.value})}/>
+                    Female
+                  </label>
+                </div>
+                Message: <textarea name="Message" placeholder="Enter your message" onChange={(e)=>this.setState({Message:e.target.value})}/>
+                Password: <input type="password" name="Password" placeholder="Enter your password" onChange={(e)=>this.setState({Password:e.target.value})}/> 
+                Confirm Password: <input type="password" name="Confirm Password" placeholder="Confirm your password" onChange={(e)=>this.setState({Confirm_password:e.target.value})}/>
                 <br/>
                 <label>
                 <input type="checkbox" onChange={()=>this.setState({Agree:"yes"})}/>
@@ -38,9 +47,7 @@ class LoginPage extends React.Component{
                 <input type="checkbox" name="terms and condition" value="yes"/> */}
                 <br/>
                 <input type="button" value="Submit"/>
-
-
-            </>
+            </div>
         )
     }
 }
