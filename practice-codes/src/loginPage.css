@@ -1,0 +1,95 @@
+.login-page-root > div {
+  display: flex;
+  align-items: center;
+  margin: 0.01rem 0;
+}
+.login-page-root > div > span {
+  min-width: 70px;
+  text-align: left;
+  margin-right: 0.5rem;
+}
+.login-page-root > div > input[type="text"],
+.login-page-root > div > input[type="password"],
+.login-page-root > div > textarea {
+  flex: 1;
+  width: auto;
+}
+.login-page-root > div > input[name="Confirm Password"] {
+  min-width: 180px;
+}
+
+
+.gender-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0.2rem 0 0.3rem 0;
+}
+
+.gender-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 0.3rem;
+  color: #000;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1.5px solid #333;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.2em;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="radio"]:checked {
+  background: #19c37d;
+  border-color: #19c37d;
+  box-shadow: none;
+}
+
+body, .login-page-root {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.login-page-root {
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: #ffffff;
+  width: 420px;
+  max-width: 95vw;
+}
+.login-page-root > * {
+  margin: 0.02rem 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+textarea, select {
+  background: #fff;
+  color: #000000;
+  border: 1px solid #bbb;
+  padding: 0.18rem 0.5rem;
+  margin: 0.01rem 0;
+  border-radius: 4px;
+  width: 90%;
+  box-sizing: border-box;
+}
